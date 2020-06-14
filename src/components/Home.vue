@@ -2,9 +2,8 @@
     <div>
         <h1>The Home Page</h1>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores, aut autem, blanditiis consequuntur
-            dolore excepturi laborum maiores minima nihil non nulla obcaecati quas quibusdam quod sed suscipit vero
-            voluptatem.</p>
-
+        <p>To check users go to User option in the menu</p>
+        <p>To check posts go to Post option in the menu</p>
+        <p>To check comments go to Comment option in the menu</p>
     </div>
 </template>
