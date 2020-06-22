@@ -8,13 +8,9 @@ import NewComment from './components/comment/NewComment.vue';
 
 export const routes = [
     { path: '', component: Home } ,
-    { path: 'post/new', component: NewPost } ,
-    { path: '/post', component: Post, children: [
-    ]},
-    { path: '/comment', component: Comment, children: [
-        { path: '/new', component: NewComment}
-    ]},
-    { path: '/user', component: User, children: [
-        { path: '/new', component: NewUser }
-    ]} 
+    { path: '/post/new', component: NewPost } ,
+    { path: '/user/new', component: NewUser } ,
+    { path: '/post', component: Post},
+    { path: '/comment', component: Comment },
+    { path: '/user', component: User} 
 ];

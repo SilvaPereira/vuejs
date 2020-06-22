@@ -6,15 +6,14 @@
         <!-- <button class="btn btn-primary" v-on:click.prevent="getPostComment()">Get a Post Comments</button> -->
         <input v-model="inputPostId" type="text" id="inputPostId">
         <!-- <button class="btn btn-primary" v-on:click.prevent="navigateNewPost">New Post</button> -->
-        <router-link tag="button" to="/post/new" class=""><a>New Post</a></router-link>
-        
-        <button @click="navigateBack" class="btn btn-primary">Go Back</button>
+        <router-link tag="button" to="/post/new" class="btn btn-primary">New Post</router-link>
+        <button @click="navigateBack" class="btn btn-primary">Back</button>
         <hr>
         <button v-if="show" @click="navigateBack" class="btn btn-primary">Clear Results</button>
         <ul>
             <li class="list-group-item" v-for="post in posts" v-bind:key="post">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><strong>Post Information</strong>
+                    <div class="panel-heading"><strong>Post Information {{ post.id }}</strong>
                     <hr>
                         <div class="row">
                             <div class="col-sm-10">
@@ -65,9 +64,6 @@ export default {
         navigateBack() {
             this.$router.push('/');
         },
-        //navigateNewPost() {
-        //    this.$router.push('/post/new');
-        //},
         getAllPosts() {
             this.$http.get('posts')
             .then(response => {

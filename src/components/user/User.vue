@@ -6,14 +6,14 @@
         <input v-model="inputUserId" type="text" id="inputUserId">
         <!-- <button class="btn btn-primary" v-on:click.prevent="">New User</button> -->
         <router-link tag="button" to="/user/new" class="btn btn-primary">New User</router-link>
-        <button @click="navigateBack" class="btn btn-primary">Go Back</button>
+        <button @click="navigateBack" class="btn btn-primary">Back</button>
         <hr>
         <button v-if="show" @click="navigateBack" class="btn btn-primary">Clear Results</button>
         <hr>
         <ul>
             <li class="list-group-item" v-for="user in users" v-bind:key="user"> 
                 <div class="panel panel-default">
-                    <div class="panel-heading"><strong>User Information</strong>
+                    <div class="panel-heading"><strong>User Information {{ user.id }} </strong>
                     <hr>
                         <div class="row">
                             <div class="col-sm-6">

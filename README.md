@@ -16,3 +16,5 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+# json-server. see https://egghead.io/lessons/javascript-creating-demo-apis-with-json-server for more information
