@@ -3,9 +3,11 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import VueResource from 'vue-resource'
 import { routes } from './routes'
+import Vuelidate from 'vuelidate'
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(Vuelidate);
 
 const router = new VueRouter({
   routes,
