@@ -4,7 +4,15 @@
         <button class="btn btn-primary" v-on:click.prevent="getAllUsers()">Get all Users</button>
         <button class="btn btn-primary" v-on:click.prevent="getUser()">Get User</button>
         <input v-model="inputUserId" type="text" id="inputUserId">
-        <!-- <button class="btn btn-primary" v-on:click.prevent="">New User</button> -->
+        <!-- <button class="btn btn-primary" v-on:click.prevent="">New User</button> 
+        
+        <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search" name="search">
+      <div class="input-group-btn">
+        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+      </div>
+    </div>
+    -->
         <router-link tag="button" to="/user/new" class="btn btn-primary">New User</router-link>
         <button @click="navigateBack" class="btn btn-primary">Back</button>
         <hr>
