@@ -5,7 +5,6 @@
         <button class="btn btn-primary" v-on:click.prevent="getPost()">Get Post</button>
         <!-- <button class="btn btn-primary" v-on:click.prevent="getPostComment()">Get a Post Comments</button> -->
         <input v-model="inputPostId" type="text" id="inputPostId">
-        <!-- <button class="btn btn-primary" v-on:click.prevent="navigateNewPost">New Post</button> -->
         <router-link tag="button" to="/post/new" class="btn btn-primary">New Post</router-link>
         <button @click="navigateBack" class="btn btn-primary">Back</button>
         <hr>
@@ -27,13 +26,14 @@
                 </div>
             </li>
         </ul> 
-        <!-- <ul>
+        <ul v-if="onePost">
         <li class="list-group-item"> {{onePost.userId}} - {{onePost.id}} - {{onePost.title}} - {{onePost.body}}</li>
-        </ul> -->
-        <ul>
+        </ul> 
+        <ul v-if="show">
             <li class="list-group-item" v-for="comment in comments" v-bind:key="comment">{{ comment.postId }} - {{ comment.id }} - {{ comment.name }} - {{ comment.email }} - {{ comment.body }}</li>
         </ul> 
         <router-view></router-view>
+        {{ onePost }}
     </div>
 </template>
 
