@@ -23,6 +23,7 @@
             <strong>Warning!</strong> You need to write a User Id to search for.
         </div>
         <button v-if="show" @click="navigateBack" class="btn btn-primary">Clear Results</button>
+
         <ul>
             <li class="list-group-item" v-for="user in users" v-bind:key="user"> 
                 <div class="panel panel-default">
@@ -125,6 +126,7 @@
                 </div>
             </li>
         </ul> 
+
         <router-view></router-view>
     </div>
 </template>
@@ -134,6 +136,8 @@ export default {
     name: 'app',
     data() {
     return {
+        page: 1,
+        //length: 0,
         user: {
                 id: '',
                 name: '',
@@ -196,6 +200,7 @@ export default {
             this.$http.get('users')
                 .then(response => {
                             console.log(response.data);
+                            //console.log(response.data.length);
                             return response.json();
                         })
                         .then(data => {
@@ -212,7 +217,7 @@ export default {
                 this.error = false;
                 this.warning = true;
                 return;
-            }
+            } 
             this.$http.get('users/' + inputUserId.value)
             .then(response => {
                 console.log(response.data);
